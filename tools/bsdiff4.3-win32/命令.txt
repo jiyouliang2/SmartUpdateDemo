@@ -1,0 +1,8 @@
+#命令格式
+usage: bsdiff oldfile newfile patchfile
+
+#命令示范
+bsdiff.exe app-debug-old.apk app-debug-new.apk app-debug.patch
+
+#push补丁到sdcard根路径
+adb push app-debug.patch /sdcard/
