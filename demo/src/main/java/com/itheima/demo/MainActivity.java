@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
     public void update(View v) {
         try {
             PackageManager pm = getPackageManager();
-            ApplicationInfo appInfo = pm.getApplicationInfo("com.ss.android.article.news", 0);
-            final String oldPath = appInfo.sourceDir;//今日头条旧版本路径
+            ApplicationInfo appInfo = pm.getApplicationInfo(getPackageName(), 0);
+            final String oldPath = appInfo.sourceDir;//旧版本路径
             final File newApkFile = new File(Environment.getExternalStorageDirectory(), "toutiao_new.apk");//新版本保存路径
             final File patchFile = new File(Environment.getExternalStorageDirectory(), "toutiao.patch");//更新包路径
 
